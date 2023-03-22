@@ -1,1 +1,3 @@
-# [DEMO HOUSE](./DEMO_HOUSE.md)
+# Nornir Demos
+
+## [DEMO HOUSE](./DEMO_HOUSE.md)
