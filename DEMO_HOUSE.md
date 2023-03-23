@@ -2,7 +2,7 @@
 
 ## Domains
 
-demo-house.cioty.com
+demohouse.cioty.com
 
 ## Services
 
@@ -12,22 +12,15 @@ Represent ESP32 micro-controller inside the house. should link to APP service to
 
 ```xml
 <RTW>
-<DEMO_DOOR></DEMO_DOOR>
-<DEMO_LIGHT></DEMO_LIGHT>
-<DEMO_FIRE></DEMO_FIRE>
-<DEMO_DHT11></DEMO_DHT11>
-<DEMO_CO2></DEMO_CO2>
-<DEMO_PIR></DEMO_PIR>
-<DEMO_FAN></DEMO_FAN>
-<COMMAND>
-  @DEMO-HOUSE/UI#COMMAND@
-</COMMAND>
+<SENDER></SENDER>
+<PAYLOAD></PAYLOAD>
+<COMMAND>@DEMOHOUSE/UI#COMMAND@</COMMAND>
 </RTW>
 ```
 
 ### Ghosts
 
-This service should have two ghosts, one for each ESP32. Each of those ghosts should have 1 morphed ghost: demo-house.cioty.com/ui##1
+This service should have two ghosts, one for each ESP32. Each of those ghosts should have 1 morphed ghost: demohouse.cioty.com/ui##1
 
 ### ui
 
@@ -35,19 +28,18 @@ This is the UI service with a floor plan. It should link to GW service and recei
 
 ```xml
 <RTW>
-<PAYLOAD>
-  @DEMO-HOUSE/ESP32GW#DEMO_DOOR@
-  @DEMO-HOUSE/ESP32GW#DEMO_LIGHT@
-  @DEMO-HOUSE/ESP32GW#DEMO_FIRE@
-  @DEMO-HOUSE/ESP32GW#DEMO_DHT11@
-  @DEMO-HOUSE/ESP32GW#DEMO_CO2@
-  @DEMO-HOUSE/ESP32GW#DEMO_PIR@
-  @DEMO-HOUSE/ESP32GW#DEMO_FAN@
-</PAYLOAD>
+<SENDER></SENDER>
+<PAYLOAD>@DEMOHOUSE/ESP32#PAYLOAD@</PAYLOAD>
 <COMMAND></COMMAND>
 </RTW>
 ```
 
 ## Ghosts
 
-This service should have a 1 ghost. It should have 2 morphed ghosts: demo-house.cioty.com/esp32gw##1 and demo-house.cioty.com/esp32gw##2.
+This service should have a 1 ghost. It should have 2 morphed ghosts: demohouse.cioty.com/esp32gw##1 and demohouse.cioty.com/esp32gw##2.
+
+## Project Links
+
+[UI](https://github.com/NornirAS/demo-house-ui)
+
+[BACKEND](https://github.com/NornirAS/demo-house-backend)
